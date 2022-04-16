@@ -1,0 +1,39 @@
+<mat-toolbar>
+    <span>Register</span>
+</mat-toolbar>
+<mat-card class="my-card">
+    <form class="my-form" [formGroup]="registerform" (ngSubmit)="handleSubmit()" >
+    <mat-card-content>
+            <mat-form-field class="full-width">
+                <mat-label>FirstName</mat-label> 
+                <input matInput placeholder="FirstName" formControlName="firstname" name="FirstName">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>LastName</mat-label>
+                <input matInput placeholder="LastName"  formControlName="lastname" name="LastName">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Email</mat-label>
+                <input matInput placeholder="Email"  formControlName="email" name="email">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Password</mat-label>
+                <input matInput placeholder="Password"  formControlName="password" name="password">
+            </mat-form-field>
+            <mat-form-field class="full-width">
+                <mat-label>Dob</mat-label>
+                <input matInput placeholder="Dob"  formControlName="dob" name="Dob">
+            </mat-form-field>
+            <mat-label>Role</mat-label>
+            <div>
+                <mat-radio-group  formControlName="role">
+                    <mat-radio-button value="1">Admin</mat-radio-button>
+                    <mat-radio-button value="2">Uer</mat-radio-button>
+                </mat-radio-group>            
+            </div>
+        </mat-card-content>
+        <mat-card-actions>
+            <button type="submit" mat-raised-button color="primary">Register</button>
+        </mat-card-actions>
+    </form>
+</mat-card>
